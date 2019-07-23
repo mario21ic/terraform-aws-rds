@@ -2,6 +2,10 @@ variable "region" {
   description = "Regions aws"
 }
 
+variable "env" {
+  description = "environment name"
+}
+
 variable "allocated_storage" {
   description = "Storage size in GB"
 }
@@ -12,6 +16,11 @@ variable "engine" {
 
 variable "engine_version" {
   description = "Engine version"
+}
+
+variable "family" {
+  default = "postgres96"
+  description = "family name"
 }
 
 variable "name" {
@@ -27,9 +36,6 @@ variable "instance_class" {
   description = "Instance class"
 }
 
-variable "env" {
-  description = "environment name"
-}
 
 variable "username" {
   description = "usr for dev db"

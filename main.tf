@@ -56,8 +56,8 @@ resource "aws_db_instance" "rds_backend_backup" {
 }
 
 resource "aws_db_parameter_group" "rds_pg" {
-  name = "${var.env}-${var.name}-pg-96"
-  family = "postgres9.6"
+  name = "${var.env}-pg-${var.name}"
+  family = "${var.family}"
 
 //  parameter {
 //    name = "server_encoding"
